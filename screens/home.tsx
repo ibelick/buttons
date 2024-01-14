@@ -10,34 +10,33 @@ type CardComponentProps = {
 
 const CardComponent: React.FC<CardComponentProps> = ({ children, slug }) => {
   return (
-    <div className="relative flex items-center justify-center rounded-xl bg-neutral-200 px-8 py-32 backdrop-blur ">
+    <div className="relative flex items-center justify-center rounded-xl bg-white px-8 py-32 backdrop-blur ">
       <div className="absolute right-5 top-3">
         <Link href={`/${slug}`}>
           <ArrowRightIcon className="h-5 w-5 text-slate-400" />
         </Link>
       </div>
-      {/* set the components to 160px */}
-      <div className="[&>button]:w-40 [&>div]:w-40 [&>input]:w-40">
-        {children}
-      </div>
+      {children}
     </div>
   );
 };
 
 export const Home = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center p-24">
-      <main className="flex flex-col">
+    <div className="relative mx-auto min-h-screen w-full max-w-7xl px-6 md:px-8 lg:px-12">
+      <main>
         <section>
           <h1 className="">Explore a collection of button</h1>
         </section>
-        <section className="mx-auto max-w-7xl py-10">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {BUTTONS.map((item, index) => (
-              <CardComponent key={index} slug={`/${index}`}>
-                <item.component />
-              </CardComponent>
-            ))}
+        <section className="mx-auto">
+          <div className="grid grid-cols-4">
+            {BUTTONS.map((comp, index) => {
+              return (
+                <CardComponent key={index} slug={`/${index}`}>
+                  <comp.component />
+                </CardComponent>
+              );
+            })}
           </div>
         </section>
       </main>
