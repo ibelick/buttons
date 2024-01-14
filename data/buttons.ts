@@ -4,24 +4,22 @@ import Button3 from "@/components/buttons/3";
 import Button4 from "@/components/buttons/4";
 import Button5 from "@/components/buttons/5";
 import Button6 from "@/components/buttons/6";
+import Button7 from "@/components/buttons/7";
+import Button8 from "@/components/buttons/8";
+import Button9 from "@/components/buttons/9";
+import Button10 from "@/components/buttons/10";
+import Button11 from "@/components/buttons/11";
 
 export const BUTTONS = [
-  {
-    component: Button1,
-  },
-  {
-    component: Button2,
-  },
-  {
-    component: Button3,
-  },
-  {
-    component: Button4,
-  },
-  {
-    component: Button5,
-  },
-  {
-    component: Button6,
-  },
+  Button1,
+  Button2,
+  Button3,
+  Button4,
+  Button5,
+  Button6,
+  Button7,
+  Button8,
+  Button9,
+  Button10,
+  Button11,
 ];

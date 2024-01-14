@@ -30,10 +30,10 @@ export const Home = () => {
         </section>
         <section className="mx-auto">
           <div className="grid grid-cols-4">
-            {BUTTONS.map((comp, index) => {
+            {BUTTONS.map((Comp, index) => {
               return (
                 <CardComponent key={index} slug={`/${index}`}>
-                  <comp.component />
+                  <Comp />
                 </CardComponent>
               );
             })}
