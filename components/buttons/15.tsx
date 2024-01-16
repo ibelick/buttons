@@ -1,6 +1,4 @@
-import React from "react";
-
-const Button14 = () => {
+const Button15 = () => {
   return (
     <>
       <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-black px-6 font-medium text-neutral-200 transition hover:scale-110">
@@ -13,4 +11,4 @@ const Button14 = () => {
   );
 };
 
-export default Button14;
+export default Button15;
