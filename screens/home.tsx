@@ -11,11 +11,6 @@ type CardComponentProps = {
 const CardComponent: React.FC<CardComponentProps> = ({ children, slug }) => {
   return (
     <div className="relative flex items-center justify-center rounded-xl bg-white px-8 py-32 backdrop-blur ">
-      <div className="absolute right-5 top-3">
-        <Link href={`/${slug}`}>
-          <ArrowRightIcon className="h-5 w-5 text-slate-400" />
-        </Link>
-      </div>
       {children}
     </div>
   );
@@ -29,7 +24,7 @@ export const Home = () => {
           <h1 className="">Explore a collection of button</h1>
         </section>
         <section className="mx-auto">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-3">
             {BUTTONS.map((Comp, index) => {
               return (
                 <CardComponent key={index} slug={`/${index}`}>
