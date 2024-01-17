@@ -1,7 +1,5 @@
 import React from "react";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { BUTTONS } from "@/data/buttons";
-import Link from "next/link";
 
 type CardComponentProps = {
   children: React.ReactNode;
@@ -18,9 +16,9 @@ const CardComponent: React.FC<CardComponentProps> = ({ children, slug }) => {
 
 export const Home = () => {
   return (
-    <div className="relative mx-auto min-h-screen w-full max-w-screen-sm px-2 md:px-8 lg:px-12">
+    <div className="relative mx-auto min-h-screen w-full max-w-screen-sm border-l border-r border-l-neutral-50 border-r-neutral-50 px-2 pb-12 md:px-6">
       <main>
-        <section className="my-8">
+        <section className="py-8">
           <h1 className="text-xl font-medium text-neutral-950">Buttons</h1>
           <div className="text-neutral-800">
             <p>
@@ -40,6 +38,27 @@ export const Home = () => {
           </div>
         </section>
       </main>
+      <footer>
+        <div className="mt-8">
+          <span className="inline-flex">
+            Made by{" "}
+            <a
+              href="https://twitter.com/ibelick"
+              className="ml-1 inline-flex hover:underline"
+            >
+              ibelick
+            </a>
+          </span>
+        </div>
+      </footer>
+      <div
+        className="pointer-events-none fixed bottom-0 left-0 h-24 w-full bg-red-50"
+        style={{
+          background: "linear-gradient(to bottom,transparent, #fff 10%)",
+          maskImage: "linear-gradient(to top, #fff 10%,transparent)",
+          backdropFilter: "blur(1px)",
+        }}
+      />
     </div>
   );
 };
