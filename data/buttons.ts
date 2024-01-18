@@ -40,6 +40,14 @@ import Button39 from "@/components/buttons/39";
 import Button40 from "@/components/buttons/40";
 import Button41 from "@/components/buttons/41";
 import Button42 from "@/components/buttons/42";
+import Button43 from "@/components/buttons/43";
+import Button44 from "@/components/buttons/44";
+import Button45 from "@/components/buttons/45";
+import Button46 from "@/components/buttons/46";
+import Button47 from "@/components/buttons/47";
+import Button48 from "@/components/buttons/48";
+import Button49 from "@/components/buttons/49";
+import Button50 from "@/components/buttons/50";
 
 export const BUTTONS = [
   Button1,
@@ -84,4 +92,12 @@ export const BUTTONS = [
   Button40,
   Button41,
   Button42,
+  Button43,
+  Button44,
+  Button45,
+  Button46,
+  Button47,
+  Button48,
+  Button49,
+  Button50,
 ];
