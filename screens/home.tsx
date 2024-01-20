@@ -1,5 +1,6 @@
 import React from "react";
 import { BUTTONS } from "@/data/buttons";
+import { ButtonIcon, StarIcon } from "@radix-ui/react-icons";
 
 type CardComponentProps = {
   children: React.ReactNode;
@@ -14,16 +15,47 @@ const CardComponent: React.FC<CardComponentProps> = ({ children, slug }) => {
   );
 };
 
+const ButtonGithubStar = () => {
+  return (
+    <a
+      href="https://github.com/ibelick/buttons"
+      target="_blank"
+      className="group relative inline-flex cursor-pointer items-center rounded-md bg-black px-3 py-1 text-sm text-white shadow-lg shadow-neutral-500/20 transition active:scale-[.95]
+    "
+    >
+      <StarIcon className="h-4 w-4" />
+      <span className="ml-1">Star</span>
+      <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+        <div className="relative h-full w-8 bg-white/20"></div>
+      </div>
+    </a>
+  );
+};
+
 export const Home = () => {
   return (
-    <div className="relative mx-auto min-h-screen w-full max-w-screen-sm border-l border-r border-l-neutral-50 border-r-neutral-50 px-2 pb-12 md:px-6">
+    <div className="relative mx-auto min-h-screen w-full max-w-screen-sm border-l-neutral-50 border-r-neutral-50 px-2 pb-12 sm:border-l sm:border-r md:px-6">
       <main>
-        <section className="py-8">
-          <h1 className="text-xl font-medium text-neutral-950">Buttons</h1>
-          <div className="text-neutral-800">
-            <p>
-              Collection of Tailwind CSS buttons, ease code copy/paste, no js.
-            </p>
+        <section className="pt-8">
+          <div className="flex flex-col items-start">
+            <div className="mb-6 flex w-full items-center justify-between">
+              <div className="rounded-full bg-black px-2">
+                <ButtonIcon className="h-4 w-4 text-white" />
+              </div>
+              <ButtonGithubStar />
+            </div>
+
+            <div className="mb-6">
+              <h1 className="mb-1 text-xl font-medium text-neutral-900">
+                buttons.ibelick
+              </h1>
+              <div className="text-neutral-800">
+                <p>
+                  {`Discover a collection of Tailwind CSS buttons designed to enhance your
+                  website's look. Easy to integrate with a copy-paste, no js.`}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <section className="mx-auto">
@@ -39,8 +71,8 @@ export const Home = () => {
         </section>
       </main>
       <footer>
-        <div className="mt-8">
-          <span className="inline-flex">
+        <div className="mb-4 mt-8 ">
+          <span className="inline-flex text-neutral-900">
             Made by{" "}
             <a
               href="https://twitter.com/ibelick"
