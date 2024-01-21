@@ -1,19 +1,19 @@
-import React from "react";
+import { promisify } from "util";
+import fs from "fs";
+import path from "path";
 import { BUTTONS } from "@/data/buttons";
 import { ButtonIcon, StarIcon } from "@radix-ui/react-icons";
+import { CardComponent } from "@/components/app/card-component";
 
-type CardComponentProps = {
-  children: React.ReactNode;
-  slug: string;
-};
-
-const CardComponent: React.FC<CardComponentProps> = ({ children, slug }) => {
-  return (
-    <div className="relative flex items-center justify-center rounded-[4px] bg-neutral-50 px-0 py-32 md:px-2 md:py-32">
-      {children}
-    </div>
+async function readFilePath(filePath: string) {
+  const readFile = promisify(fs.readFile);
+  const fileContent = await readFile(
+    path.join(process.cwd(), filePath),
+    "utf8",
   );
-};
+
+  return fileContent;
+}
 
 const ButtonGithubStar = () => {
   return (
@@ -44,7 +44,6 @@ export const Home = () => {
               </div>
               <ButtonGithubStar />
             </div>
-
             <div className="mb-6">
               <h1 className="mb-1 text-xl font-medium text-neutral-900">
                 buttons.ibelick
@@ -60,9 +59,12 @@ export const Home = () => {
         </section>
         <section className="mx-auto">
           <div className="grid grid-cols-2 gap-2">
-            {BUTTONS.map((Comp, index) => {
+            {BUTTONS.map(async (Comp, index) => {
+              const filePath = `./components/buttons/${index + 1}.tsx`;
+              const code = await readFilePath(filePath);
+
               return (
-                <CardComponent key={index} slug={`/${index}`}>
+                <CardComponent key={index} code={code}>
                   <Comp />
                 </CardComponent>
               );
@@ -72,7 +74,7 @@ export const Home = () => {
       </main>
       <footer>
         <div className="mb-4 mt-8 ">
-          <span className="inline-flex text-neutral-900">
+          <span className="inline-flex text-sm text-neutral-900">
             Made by{" "}
             <a
               href="https://twitter.com/ibelick"
