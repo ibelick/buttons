@@ -60,7 +60,13 @@ export const Home = () => {
         <section className="mx-auto">
           <div className="grid grid-cols-2 gap-2">
             {BUTTONS.map(async (Comp, index) => {
-              const filePath = `./components/buttons/${index + 1}.tsx`;
+              if (!Comp?.name) {
+                console.log("Comp", Comp);
+
+                return null;
+              }
+
+              const filePath = `./components/buttons/${Comp.name}.tsx`;
               const code = await readFilePath(filePath);
 
               return (
