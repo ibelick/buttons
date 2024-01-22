@@ -20,7 +20,7 @@ const ButtonGithubStar = () => {
     <a
       href="https://github.com/ibelick/buttons"
       target="_blank"
-      className="group relative inline-flex cursor-pointer items-center rounded-md bg-black px-3 py-1 text-sm text-white shadow-lg shadow-neutral-500/20 transition active:scale-[.95]
+      className="group relative inline-flex cursor-pointer items-center rounded-md bg-neutral-950 px-3 py-1 text-sm text-white shadow-lg shadow-neutral-500/20 transition active:scale-[.95]
     "
     >
       <StarIcon className="h-4 w-4" />
@@ -39,7 +39,7 @@ export const Home = () => {
         <section className="pt-8">
           <div className="flex flex-col items-start">
             <div className="mb-6 flex w-full items-center justify-between">
-              <div className="rounded-full bg-black px-2">
+              <div className="rounded-full bg-neutral-950 px-2">
                 <ButtonIcon className="h-4 w-4 text-white" />
               </div>
               <ButtonGithubStar />

@@ -1,6 +1,6 @@
 const Button4 = () => {
   return (
-    <button className="cursor-pointer rounded-md bg-black px-3 py-1 text-sm text-white shadow-lg shadow-neutral-500/20 transition active:scale-[.95]">
+    <button className="cursor-pointer rounded-md bg-neutral-950 px-3 py-1 text-sm text-white shadow-lg shadow-neutral-500/20 transition active:scale-[.95]">
       Click me
     </button>
   );

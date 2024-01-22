@@ -2,7 +2,7 @@ import { ArrowRightIcon, StarIcon } from "@radix-ui/react-icons";
 
 const Button18 = () => {
   return (
-    <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-black px-6 font-medium text-neutral-200 duration-500">
+    <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
       <div className="relative inline-flex -translate-x-0 items-center transition group-hover:translate-x-6">
         <div className="absolute -translate-x-4 opacity-0 transition group-hover:-translate-x-6 group-hover:opacity-100">
           <StarIcon className="h-5 w-5" />

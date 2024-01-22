@@ -52,6 +52,7 @@ import Button51 from "@/components/buttons/51";
 import Button52 from "@/components/buttons/52";
 import Button53 from "@/components/buttons/53";
 import Button54 from "@/components/buttons/54";
+import Button55 from "@/components/buttons/55";
 
 export const BUTTONS = [
   Button1,
@@ -108,4 +109,5 @@ export const BUTTONS = [
   Button52,
   Button53,
   Button54,
+  Button55,
 ];
