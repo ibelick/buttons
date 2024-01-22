@@ -2,20 +2,30 @@
 import { CopyIcon, CheckIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { toast } from "sonner";
+import { createRoot } from "react-dom/client";
+import { flushSync } from "react-dom";
 
 type CardComponentProps = {
   children: React.ReactNode;
-  code: string;
 };
 
-export const CardComponent: React.FC<CardComponentProps> = ({
-  children,
-  code,
-}) => {
+export const CardComponent: React.FC<CardComponentProps> = ({ children }) => {
   const [hasCheckIcon, setHasCheckIcon] = useState(false);
 
+  const getCode = () => {
+    const div = document.createElement("div");
+    const root = createRoot(div);
+    flushSync(() => {
+      root.render(children);
+    });
+
+    const code = div.innerHTML;
+    return code;
+  };
+
   const onCopy = () => {
-    toast.success("Button code copied to clipboard!");
+    const code = getCode();
+    toast.success("Copied to clipboard!");
     navigator.clipboard.writeText(code);
     setHasCheckIcon(true);
 

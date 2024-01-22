@@ -1,19 +1,6 @@
-import { promisify } from "util";
-import fs from "fs";
-import path from "path";
-import { BUTTONS } from "@/data/buttons";
 import { ButtonIcon, StarIcon } from "@radix-ui/react-icons";
+import { BUTTONS } from "@/data/buttons";
 import { CardComponent } from "@/components/app/card-component";
-
-async function readFilePath(filePath: string) {
-  const readFile = promisify(fs.readFile);
-  const fileContent = await readFile(
-    path.join(process.cwd(), filePath),
-    "utf8",
-  );
-
-  return fileContent;
-}
 
 const ButtonGithubStar = () => {
   return (
@@ -59,18 +46,9 @@ export const Home = () => {
         </section>
         <section className="mx-auto">
           <div className="grid grid-cols-2 gap-2">
-            {BUTTONS.map(async (Comp, index) => {
-              if (!Comp?.name) {
-                console.log("Comp", Comp);
-
-                return null;
-              }
-
-              const filePath = `./components/buttons/${Comp.name}.tsx`;
-              const code = await readFilePath(filePath);
-
+            {BUTTONS?.map((Comp) => {
               return (
-                <CardComponent key={index} code={code}>
+                <CardComponent key={Comp.name}>
                   <Comp />
                 </CardComponent>
               );
