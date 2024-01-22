@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       ) : null}
       <Toaster />
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} overflow-x-hidden`}>{children}</body>
     </html>
   );
 }
