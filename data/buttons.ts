@@ -50,6 +50,10 @@ import { SquareOutline1 } from "@/components/buttons/SquareOutline1";
 import { White1 } from "@/components/buttons/White1";
 import { White2 } from "@/components/buttons/White2";
 import { White3 } from "@/components/buttons/White3";
+import { Letters1 } from "@/components/buttons/Letters1";
+import { Letters2 } from "@/components/buttons/Letters2";
+import { Letters3 } from "@/components/buttons/Letters3";
+import { Letters4 } from "@/components/buttons/Letters4";
 
 export const BUTTONS = [
   Black1,
@@ -104,4 +108,8 @@ export const BUTTONS = [
   Shadow3,
   Shadow4,
   Shadow5,
+  Letters1,
+  Letters2,
+  Letters3,
+  Letters4,
 ];
