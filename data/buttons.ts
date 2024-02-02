@@ -54,6 +54,14 @@ import { Letters1 } from "@/components/buttons/Letters1";
 import { Letters2 } from "@/components/buttons/Letters2";
 import { Letters3 } from "@/components/buttons/Letters3";
 import { Letters4 } from "@/components/buttons/Letters4";
+import { Link1 } from "@/components/buttons/Link1";
+import { Link2 } from "@/components/buttons/Link2";
+import { Link3 } from "@/components/buttons/Link3";
+import { Link4 } from "@/components/buttons/Link4";
+import { Link5 } from "@/components/buttons/Link5";
+import { Link6 } from "@/components/buttons/Link6";
+import { Link7 } from "@/components/buttons/Link7";
+import { Link8 } from "@/components/buttons/Link8";
 
 export const BUTTONS = [
   Black1,
@@ -112,4 +120,12 @@ export const BUTTONS = [
   Letters2,
   Letters3,
   Letters4,
+  Link1,
+  Link2,
+  Link3,
+  Link4,
+  Link5,
+  Link6,
+  Link7,
+  Link8,
 ];
