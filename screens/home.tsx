@@ -21,7 +21,7 @@ const ButtonGithubStar = () => {
 
 export const Home = () => {
   return (
-    <div className="relative mx-auto min-h-screen w-full max-w-screen-sm border-l-neutral-50 border-r-neutral-50 px-2 pb-12 sm:border-l sm:border-r md:px-6">
+    <div className="relative mx-auto min-h-screen w-full max-w-screen-lg border-l-neutral-50 border-r-neutral-50 px-2 pb-12 sm:border-l sm:border-r md:px-6">
       <main>
         <section className="pt-8">
           <div className="flex flex-col items-start">
@@ -38,14 +38,15 @@ export const Home = () => {
               <div className="text-neutral-800">
                 <p>
                   {`Discover a collection of Tailwind CSS buttons designed to enhance your
-                  website's look. Easy to integrate with a copy-paste, no js.`}
+                  website's look.`}
                 </p>
+                <p>Easy to integrate with a copy-paste, no js</p>
               </div>
             </div>
           </div>
         </section>
         <section className="mx-auto">
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {BUTTONS?.map((Comp) => {
               return (
                 <CardComponent key={Comp.name}>

@@ -35,7 +35,7 @@ export const CardComponent: React.FC<CardComponentProps> = ({ children }) => {
   };
 
   return (
-    <div className="relative flex items-center justify-center rounded-[4px] bg-neutral-50 px-0 py-32 md:px-2 md:py-32">
+    <div className="relative flex items-center justify-center rounded-[4px] bg-neutral-50 px-0 py-24 md:px-2">
       <div
         className="absolute right-3 top-3 cursor-pointer bg-transparent p-2"
         onClick={onCopy}
