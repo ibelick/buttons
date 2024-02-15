@@ -1,7 +1,5 @@
-'use client'
-
 import { ButtonIcon, StarIcon } from "@radix-ui/react-icons";
-import { BUTTONS, TButton } from "@/data/buttons";
+import { BUTTONS } from "@/data/buttons";
 import { CardComponent } from "@/components/app/card-component";
 
 const ButtonGithubStar = () => {
@@ -50,10 +48,15 @@ export const Home = () => {
                 <section className="mx-auto">
                     <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {BUTTONS?.map((Comp) => {
+                            async function RenderChildComponent() {
+                                "use server"
+                                return Comp()
+                            }
                             return (
                                 <CardComponent
                                     key={Comp.name}
-                                    ChildComponent={Comp} />
+                                    ChildComponent={Comp}
+                                />
                             );
                         })}
                     </div>
