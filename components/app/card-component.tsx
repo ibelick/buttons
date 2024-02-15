@@ -1,10 +1,9 @@
 import { CopyIcon, CheckIcon } from "@radix-ui/react-icons";
-import { ReactInstance, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { TButton } from "@/data/buttons";
 import React from "react";
 import ReactDOM from "react-dom";
-import { createRoot } from "react-dom/client";
 
 type CardComponentProps = {
     ChildComponent: TButton;
@@ -15,28 +14,19 @@ export const CardComponent: React.FC<CardComponentProps> = ({
 }) => {
     const [hasCheckIcon, setHasCheckIcon] = useState(false);
     const parentRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        if(parentRef.current) {
-            const parentRoot = createRoot(parentRef.current)
-            parentRoot.render(<ChildComponent/>)
-
-        }
-
-    }, [ChildComponent])
 
     const onCopy = () => {
+        // Target the childNode
         const code = parentRef.current?.childNodes[0]!
-        if(!code) return
-
+        // Find the node to access outerHTML attribute
         const htmlElement = ReactDOM.findDOMNode(code)! as Element
 
-        if(!htmlElement) return 
-
+        // Get the HTML code 
         const html = htmlElement.outerHTML
+
         toast.success("Copied to clipboard!");
         navigator.clipboard.writeText(html);
         setHasCheckIcon(true);
-
         setTimeout(() => {
             setHasCheckIcon(false);
         }, 1000);
@@ -62,6 +52,7 @@ export const CardComponent: React.FC<CardComponentProps> = ({
                 </div>
             </div>
             <div ref={parentRef}  >
+                <ChildComponent />
             </div>
         </div>
     );
