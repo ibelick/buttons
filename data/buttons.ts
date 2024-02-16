@@ -63,6 +63,7 @@ import { Link6 } from "@/components/buttons/Link6";
 import { Link7 } from "@/components/buttons/Link7";
 import { Link8 } from "@/components/buttons/Link8";
 import { SubtleSkeuomorphic1 } from "@/components/buttons/SubtleSkeuomorphic1";
+import { SubtleSkeuomorphic2 } from "@/components/buttons/SubtleSkeuomorphic2";
 
 export const BUTTONS = [
   Black1,
@@ -130,4 +131,5 @@ export const BUTTONS = [
   Link7,
   Link8,
   SubtleSkeuomorphic1,
+  SubtleSkeuomorphic2,
 ];
