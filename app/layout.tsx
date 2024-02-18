@@ -10,6 +10,28 @@ export const metadata: Metadata = {
   title: "Tailwind CSS button collection - Click-to-copy integration",
   description:
     "Discover a collection of Tailwind CSS buttons designed to enhance your website's look. Easy to integrate with a copy-paste, no js.",
+  openGraph: {
+    title: "Tailwind CSS button collection - Click-to-copy integration",
+    description:
+      "Discover a collection of Tailwind CSS buttons designed to enhance your website's look. Easy to integrate with a copy-paste, no js.",
+    type: "website",
+    url: "https://buttons.ibelick.com",
+    images: [
+      {
+        url: "https://buttons.ibelick.com/opengraph-image.jpg",
+        alt: "Tailwind CSS button collection - Click-to-copy integration",
+      },
+    ],
+  },
+  twitter: {
+    site: "@ibelick",
+    images: [
+      {
+        url: "https://buttons.ibelick.com/opengraph-image.jpg",
+        alt: "Tailwind CSS button collection - Click-to-copy integration",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
