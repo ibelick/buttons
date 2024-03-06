@@ -68,6 +68,12 @@ import { SubtleSkeuomorphic2 } from "@/components/buttons/SubtleSkeuomorphic2";
 import { SubtleSkeuomorphic3 } from "@/components/buttons/SubtleSkeuomorphic3";
 import { SubtleSkeuomorphic4 } from "@/components/buttons/SubtleSkeuomorphic4";
 import { SubtleSkeuomorphic5 } from "@/components/buttons/SubtleSkeuomorphic5";
+import { SubtleSkeuomorphic6 } from "@/components/buttons/SubtleSkeuomorphic6";
+import { SubtleSkeuomorphic7 } from "@/components/buttons/SubtleSkeuomorphic7";
+import { SubtleSkeuomorphic8 } from "@/components/buttons/SubtleSkeuomorphic8";
+import { SubtleSkeuomorphic9 } from "@/components/buttons/SubtleSkeuomorphic9";
+import { SubtleSkeuomorphic10 } from "@/components/buttons/SubtleSkeuomorphic10";
+import { SubtleSkeuomorphic11 } from "@/components/buttons/SubtleSkeuomorphic11";
 
 export const BUTTONS = [
   Black1,
@@ -140,4 +146,10 @@ export const BUTTONS = [
   SubtleSkeuomorphic3,
   SubtleSkeuomorphic4,
   SubtleSkeuomorphic5,
+  SubtleSkeuomorphic6,
+  SubtleSkeuomorphic7,
+  SubtleSkeuomorphic8,
+  SubtleSkeuomorphic9,
+  SubtleSkeuomorphic10,
+  SubtleSkeuomorphic11,
 ];
