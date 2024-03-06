@@ -13,7 +13,6 @@ import { Black7 } from "@/components/buttons/Black7";
 import { Black8 } from "@/components/buttons/Black8";
 import { Black9 } from "@/components/buttons/Black9";
 import { BlackIcon1 } from "@/components/buttons/BlackIcon1";
-import { BlackIcon10 } from "@/components/buttons/BlackIcon10";
 import { BlackIcon2 } from "@/components/buttons/BlackIcon2";
 import { BlackIcon3 } from "@/components/buttons/BlackIcon3";
 import { BlackIcon4 } from "@/components/buttons/BlackIcon4";
@@ -22,6 +21,8 @@ import { BlackIcon6 } from "@/components/buttons/BlackIcon6";
 import { BlackIcon7 } from "@/components/buttons/BlackIcon7";
 import { BlackIcon8 } from "@/components/buttons/BlackIcon8";
 import { BlackIcon9 } from "@/components/buttons/BlackIcon9";
+import { BlackIcon10 } from "@/components/buttons/BlackIcon10";
+import { BlackIcon11 } from "@/components/buttons/BlackIcon11";
 import { BlackLoading1 } from "@/components/buttons/BlackLoading1";
 import { BlackRound1 } from "@/components/buttons/BlackRound1";
 import { BlackRound2 } from "@/components/buttons/BlackRound2";
@@ -94,6 +95,7 @@ export const BUTTONS = [
   BlackIcon8,
   BlackIcon9,
   BlackIcon10,
+  BlackIcon11,
   BlackSm1,
   BlackSm2,
   BlackSmLoading1,
